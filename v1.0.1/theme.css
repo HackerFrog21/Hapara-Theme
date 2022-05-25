@@ -1,0 +1,87 @@
+body {
+    --primary-color: red;
+    --secondary-color: crimson;
+    --accent-color: white;
+    --primary-hover-color: orange;
+    --secondary-hover-color: darkred;
+    --accent-reversed-color: black;
+}
+
+.MainContainer_gap__2St9b,
+.MainContainer_toolbar__nz8kV,
+.WorkspacesPage_rootInner__a81ga,
+.ClassSelection_rootInner__QDHl7,
+.ToDoPage_main__3Jd0v,
+.LastUpdated_rootInner__3hk0y,
+.MyFilesPage_main__B5YFf,
+.ToolbarNotifications_notificationsContent__3K3cM a,
+div[class*="ReturnedAssignmentItem_theme"],
+.AssignmentItem_root__3JS4-,
+.GmailCommunicationItem_root__1l8uW,
+.MainContainer_contentNav__TbxR0 {
+    background-color: var(--primary-color) !important;
+}
+
+.LeftSidePanel_rootInner__2bzbx .LeftSidePanel_tabItem__chNxH.LeftSidePanel_active__20aEp .LeftSidePanel_arrowContainer__1gk0t,
+.LeftSidePanel_bgForIcon__1qPJ_ use {
+    color: var(--primary-color) !important;
+}
+
+.MainContainer_toolbar__nz8kV {
+    border-left-color: var(--primary-color) !important;
+}
+
+.MainContainer_rootInner__1pOnY,
+.WorkspaceTile_rootInner__Y-mTw,
+.ClassSelection_modalTrigger__15PSf,
+.ToDoTile_rootInner__2ps3k,
+.ToDoTile_completed__22EXh,
+.MyFilesTile_rootInner__2FAR0,
+.MainContainer_rightSidePanel__1il5o,
+.FilterButtons_choice__TRz7O:not(.FilterButtons_active__E6Cmk),
+.Toolbar_icon__1KoH-[data-test-id="Sd-Notifications-Button-OpenDropdown"] {
+    background-color: var(--secondary-color) !important;
+}
+
+.WorkspaceTile_rootInner__Y-mTw:hover,
+.WorkspaceTile_rootInner__Y-mTw a:hover,
+.ClassSelection_modalTrigger__15PSf:hover,
+.ToDoTile_rootInner__2ps3k:hover a,
+.ToDoTile_rootInner__2ps3k:hover .ToDoTile_completed__22EXh,
+.MyFilesTile_rootInner__2FAR0 a:hover,
+.FilterButtons_choice__TRz7O:not(.FilterButtons_active__E6Cmk):hover,
+.Toolbar_icon__1KoH-[data-test-id="Sd-Notifications-Button-OpenDropdown"]:hover{
+    background-color: var(--secondary-hover-color) !important;
+}
+
+.WorkspaceTile_rootInner__Y-mTw,
+.ToDoTile_rootInner__2ps3k a,
+.MyFilesTile_root___U8_k a {
+    border-color: var(--secondary-color) !important;
+}
+
+.ClassSelection_modalTriggerText__LhwvD,
+.ClassSelection_modalTriggerIcon__2u3rQ,
+.Toolbar_icon__1KoH-,
+.LeftSidePanel_tabsContainer__1uNGR a,
+.WorkspacesPage_rootInner__a81ga,
+.WorkspaceTile_rootInner__Y-mTw a,
+.FilterButtons_tabName__2AzlF,
+.ToDoPage_sectionHeader__11Cnx,
+.ToDoSection_sectionTitle__1pOYe {
+    color: var(--accent-color) !important;
+}
+
+.LeftSidePanel_bgForIcon__1qPJ_,
+.FilterButtons_active__E6Cmk {
+    background-color: var(--accent-color) !important;
+}
+
+.ToDoTile_tileStatus__2xX5u,
+.ToDoSection_sectionTitle__1pOYe {
+    border-color: var(--accent-color) !important;
+}
+
+.FilterButtons_active__E6Cmk .FilterButtons_tabName__2AzlF {
+    color: var(--accent-reversed-color) !important;
+}
