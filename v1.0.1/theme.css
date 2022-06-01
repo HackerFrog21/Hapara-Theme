@@ -1,10 +1,5 @@
-body {
-    --primary-color: red;
-    --secondary-color: crimson;
-    --accent-color: white;
-    --primary-hover-color: orange;
-    --secondary-hover-color: darkred;
-    --accent-reversed-color: black;
+.settings {
+    user-select: none;
 }
 
 .MainContainer_gap__2St9b,
@@ -19,16 +14,21 @@ div[class*="ReturnedAssignmentItem_theme"],
 .AssignmentItem_root__3JS4-,
 .GmailCommunicationItem_root__1l8uW,
 .MainContainer_contentNav__TbxR0 {
-    background-color: var(--primary-color) !important;
+    background-color: var(--secondary-color) !important;
 }
 
 .LeftSidePanel_rootInner__2bzbx .LeftSidePanel_tabItem__chNxH.LeftSidePanel_active__20aEp .LeftSidePanel_arrowContainer__1gk0t,
 .LeftSidePanel_bgForIcon__1qPJ_ use {
-    color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
 }
 
-.MainContainer_toolbar__nz8kV {
-    border-left-color: var(--primary-color) !important;
+.MainContainer_toolbar__nz8kV,
+.Toolbar_icon__1KoH- {
+    border-color: var(--secondary-color) !important;
+}
+
+.NotificationsFilterDropdown_item__1qf5e:hover {
+    background-color: var(--primary-light-color) !important;
 }
 
 .MainContainer_rootInner__1pOnY,
@@ -39,8 +39,9 @@ div[class*="ReturnedAssignmentItem_theme"],
 .MyFilesTile_rootInner__2FAR0,
 .MainContainer_rightSidePanel__1il5o,
 .FilterButtons_choice__TRz7O:not(.FilterButtons_active__E6Cmk),
-.Toolbar_icon__1KoH-[data-test-id="Sd-Notifications-Button-OpenDropdown"] {
-    background-color: var(--secondary-color) !important;
+.Toolbar_icon__1KoH-[data-test-id="Sd-Notifications-Button-OpenDropdown"],
+.AppLoadingPage_root__36tjD {
+    background-color: var(--primary-color) !important;
 }
 
 .WorkspaceTile_rootInner__Y-mTw:hover,
@@ -49,15 +50,18 @@ div[class*="ReturnedAssignmentItem_theme"],
 .ToDoTile_rootInner__2ps3k:hover a,
 .ToDoTile_rootInner__2ps3k:hover .ToDoTile_completed__22EXh,
 .MyFilesTile_rootInner__2FAR0 a:hover,
-.FilterButtons_choice__TRz7O:not(.FilterButtons_active__E6Cmk):hover,
-.Toolbar_icon__1KoH-[data-test-id="Sd-Notifications-Button-OpenDropdown"]:hover{
-    background-color: var(--secondary-hover-color) !important;
+.FilterButtons_choice__TRz7O:not(.FilterButtons_active__E6Cmk):hover{
+    background-color: var(--primary-hover-color) !important;
 }
 
 .WorkspaceTile_rootInner__Y-mTw,
 .ToDoTile_rootInner__2ps3k a,
 .MyFilesTile_root___U8_k a {
-    border-color: var(--secondary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.WorkspaceTile_rootInner__Y-mTw:hover {
+    border-color: var(--primary-hover-color) !important;
 }
 
 .ClassSelection_modalTriggerText__LhwvD,
@@ -68,20 +72,49 @@ div[class*="ReturnedAssignmentItem_theme"],
 .WorkspaceTile_rootInner__Y-mTw a,
 .FilterButtons_tabName__2AzlF,
 .ToDoPage_sectionHeader__11Cnx,
-.ToDoSection_sectionTitle__1pOYe {
+.ToDoSection_sectionTitle__1pOYe,
+.ToDoTile_rootInner__2ps3k a,
+.LastUpdated_rootInner__3hk0y,
+.Button_root__iDevS,
+.MyFilesPage_sectionHeader__MGOtp,
+.MyFilesSection_sectionTitle__11Rr4,
+.MyFilesTile_tileTitle__EyuwD,
+.ToolbarNotifications_rootInner__SiHbE,
+.ToolbarNotifications_rootInner__SiHbE a > div,
+.ToolbarNotifications_header__2cm49,
+.ToolbarPersonaSettings_rootInner__1JSnG,
+.LeftSidePanel_logo__3qdoA,
+.AppLoadingPage_header__3W2ND {
     color: var(--accent-color) !important;
 }
 
 .LeftSidePanel_bgForIcon__1qPJ_,
-.FilterButtons_active__E6Cmk {
+.FilterButtons_active__E6Cmk,
+.ToDoTile_date__pLfyG:not(.ToDoTile_dueTodayTomorrow__2COnS),
+.Button_root__iDevS:hover,
+.ReturnedAssignmentItem_grade__kON6E,
+.NotificationsFilterDropdown_ddTrigger__32-7-,
+::-webkit-scrollbar-thumb {
     background-color: var(--accent-color) !important;
 }
 
 .ToDoTile_tileStatus__2xX5u,
-.ToDoSection_sectionTitle__1pOYe {
+.ToDoSection_sectionTitle__1pOYe,
+.Button_root__iDevS,
+.MyFilesSection_sectionTitle__11Rr4,
+.LeftSidePanel_tabItem__chNxH:not(:first-of-type):not(:last-of-type)>a {
     border-color: var(--accent-color) !important;
 }
 
-.FilterButtons_active__E6Cmk .FilterButtons_tabName__2AzlF {
+.Toolbar_iconActive__1dv6r,
+.Toolbar_icon__1KoH-:hover {
+    box-shadow: 0 0 0 2px var(--accent-color) !important;
+}
+
+.FilterButtons_active__E6Cmk .FilterButtons_tabName__2AzlF,
+.ToDoTile_date__pLfyG:not(.ToDoTile_dueTodayTomorrow__2COnS),
+.Button_root__iDevS:hover,
+.ReturnedAssignmentItem_grade__kON6E,
+.NotificationsFilterDropdown_ddTrigger__32-7- {
     color: var(--accent-reversed-color) !important;
 }
