@@ -19,7 +19,8 @@ localStorage.color_secondary = localStorage.color_secondary || "#032B43";
 localStorage.color_accent = localStorage.color_accent || "#ffffff";
 localStorage.color_accent_reversed = localStorage.color_accent_reversed || (localStorage.color_accent ? invertHex(localStorage.color_accent) : "#000000");
 
-document.body.style = `
+const update = () => {
+  document.body.style = `
   --primary-color: ${localStorage.color_primary};
   --primary-light-color: ${localStorage.color_primary_light};
   --primary-hover-color: ${localStorage.color_primary_hover};
@@ -27,6 +28,8 @@ document.body.style = `
   --accent-color: ${localStorage.color_accent};
   --accent-reversed-color: ${localStorage.color_accent_reversed};
 `;
+}
+update();
 
 const loop = () => {
   document.querySelectorAll(".LeftSidePanel_logo__3qdoA svg g").forEach(element => {
@@ -37,23 +40,48 @@ const loop = () => {
     const settings = `
     <div class="settings">
       <h2>Customize</h2>
-      <label> Primary Color <input type="color" value="${localStorage.color_primary}"></label>
+      <label class="settings__label settings__label--color-primary"> Primary Color <input type="color" value="${localStorage.color_primary}"></label>
       <br>
-      <label> Secondary Color <input type="color" value="${localStorage.color_secondary}"></label>
+      <label class="settings__label settings__label--color-secondary"> Secondary Color <input type="color" value="${localStorage.color_secondary}"></label>
       <br>
-      <label> Accent Color <input type="color" value="${localStorage.color_accent}"></label>
+      <label class="settings__label settings__label--color-accent"> Accent Color <input type="color" value="${localStorage.color_accent}"></label>
       <br>
-      <button class="btn"> Confirm </button>
       <br>
-      <h3>Advanced Setting ⤸</h3>
-      <div class="settings__advanced">
-      
-      
+      <div class="settings__advanced settings__advanced--closed">
+        <h3 class="settings__advanced__header">
+          Advanced Setting 
+          <div class="settings__advanced__header__arrow settings__advanced__header__arrow--open">⤶</div>
+          <div class="settings__advanced__header__arrow settings__advanced__header__arrow--closed">⤵</div>
+        </h3>
+        <div class="settings__advanced__setting">
+          <label class="settings__label settings__label--color-primary-light"> Light Primary Color <input type="color" value="${localStorage.color_primary_light}"></label>
+          <br>
+          <label class="settings__label settings__label--color-primary-hover"> Primary Color on Hover <input type="color" value="${localStorage.color_primary_hover}"></label>
+          <br>
+          <label class="settings__label settings__label--color-accent-reversed"> Complimentary Accent Color <input type="color" value="${localStorage.color_accent_reversed}"></label>
+        </div>
       </div>
+      <br>
+      <button> Save </button>
     </div>
     `
-    if (element.innerHTML === settings) return;
+    if (element.innerHTML.includes('<div class="settings">')) return;
     element.innerHTML = settings;
+
+    element.querySelector(".settings__advanced").addEventListener("click", () => {
+      const $settings__advanced = document.querySelector('.settings__advanced');
+      $settings__advanced.classList = $settings__advanced.classList.contains('settings__advanced--open') ? 'settings__advanced settings__advanced--closed' : 'settings__advanced settings__advanced--open';
+    })
+
+    element.querySelector("button").addEventListener("click", () => {
+      localStorage.color_primary = element.querySelector(".settings__label--color-primary").firstElementChild.value;
+      localStorage.color_secondary = element.querySelector(".settings__label--color-secondary").firstElementChild.value;
+      localStorage.color_accent = element.querySelector(".settings__label--color-accent").firstElementChild.value;
+      localStorage.color_primary_light = element.querySelector(".settings__label--color-primary-light").firstElementChild.value;
+      localStorage.color_primary_hover = element.querySelector(".settings__label--color-primary-hover").firstElementChild.value;
+      localStorage.color_accent_reversed = element.querySelector(".settings__label--color-accent-reversed").firstElementChild.value;
+      update();
+    })
   });
 
   requestAnimationFrame(loop);

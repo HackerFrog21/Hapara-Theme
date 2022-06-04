@@ -2,6 +2,28 @@
     user-select: none;
 }
 
+.settings__advanced__header {
+    display: inline;
+}
+
+.settings__advanced__setting, .settings__advanced__header__arrow {
+    display: none;
+}
+
+.settings__advanced--open .settings__advanced__header__arrow--open {
+    display: inline;
+}
+
+.settings__advanced--closed .settings__advanced__header__arrow--closed {
+    display: inline;
+}
+
+.settings__advanced--open .settings__advanced__setting {
+    display: block;
+}
+
+
+
 .MainContainer_gap__2St9b,
 .MainContainer_toolbar__nz8kV,
 .WorkspacesPage_rootInner__a81ga,
