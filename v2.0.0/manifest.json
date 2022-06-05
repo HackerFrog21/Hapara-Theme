@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Hapara Theme",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "description": "Customize your Hapara Workspace with varieties of diffrent colors",
     "icons": {
         "16": "/icon/icon16.png",
