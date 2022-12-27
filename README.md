@@ -1,11 +1,11 @@
 # Hapara-Theme
-Customize your Hapara Workspace with varieties of diffrent colors
+Customize your Hapara Workspace with varieties of different colors
 
 ---
 Hapara Theme is a Chrome extension that allows you to customize the theme of Hapara Workspace--which 
 is a commonly used site, where teachers post homeworks and projects virtually.
 
-##### This extension is still in the early stages of developement, and therefore you may experience some lag and/or delay.
+##### This extension is still in the early stages of developement, and thus you may experience small amounts of lag or delay.
 
 
 ### How do you install this extension if your school board blocks them?
