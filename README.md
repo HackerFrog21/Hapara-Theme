@@ -1,5 +1,7 @@
 # Hapara-Theme
-Customize your Hapara Workspace with varieties of different colors
+Customize your Hapara Workspace with varieties of different colors.
+<br/><br/>
+[Install](https://chrome.google.com/webstore/detail/hapara-theme/ncheldibpngeocnbmlhnodepakedlhfm) in Chrome Web Store
 
 ---
 Hapara Theme is a Chrome extension that allows you to customize the theme of Hapara Workspace--which 
